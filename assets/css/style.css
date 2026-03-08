@@ -1,0 +1,408 @@
+*{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 'aside' 'main' 'footer';
+    height: 100vh;
+    grid-template-rows: 20% auto 15%;
+}
+
+aside{
+    grid-area: aside;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #665800;
+}
+
+.aside2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 40rem;
+    color: black;
+}
+
+.aside2 h1{
+    margin-left: 1rem;
+    font-style: italic;
+    color: #F4EFEA;
+    padding: 0.6rem;
+}
+
+
+
+label{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+option{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.8rem;
+    background-color: #C8E6C9
+}
+
+main{
+    grid-area: main;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #0C223F;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #665800;
+}
+
+.icons{
+    padding: 10px;
+}
+
+menu{
+    display: none;
+}
+
+.cardmobi{
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #FFD700;
+    color: white;
+    border-radius: 0.25rem;
+    height: 23rem;
+    margin: 10px 0;
+}
+
+.cardDesk, .cardTablet{
+    display: none;
+}
+
+    .maravilla1{
+    display: flex;
+    justify-content: center;
+    border-radius: 0.25rem;
+    width: 40rem;
+    margin: 10px;
+    height: 15rem;
+    }
+
+    button{
+    border: none;
+    border-radius: 10px;
+    background-color: #FFA000;
+    cursor: pointer;
+    margin: 0.5rem;
+    height: 30px;
+    width: 130px;
+    font-size:10px;
+    text-align: center;
+    }
+
+.pagination{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination a{
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #FFA000;;
+    border-radius: 10px;
+}
+
+.pagination a.active{
+    color: white;
+}
+
+/* Media Queries Versión Tablets*/
+
+@media only screen and (min-width: 575px) and (max-width: 1020px) {
+
+    body {
+        display: grid;
+        grid-template-areas: 'aside' 'main' 'footer';
+        height: auto;
+        grid-template-rows: auto 1fr auto; 
+        grid-template-columns: 100%;
+    } 
+
+    aside {
+        grid-area: aside;
+        padding: 0 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        box-sizing: border-box;
+        background-image: url('../img/logo.jpg'); /* Ruta de tu imagen */
+        background-repeat: no-repeat;
+        background-position: left 1px center; /* Lo situamos a la izquierda con 20px de margen */
+        background-size: contain;
+        background-color: #665800;
+    }
+
+    .aside2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 40rem;
+        gap: 10px;
+        color: black;
+    }
+
+    .aside2 h1 {
+        margin-left: 1rem;
+        font-size: 1.5rem;
+        margin: 0;
+        font-style: italic;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        color: black;
+        padding: 0.6rem;
+    }
+
+    label {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    option {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 0.8rem;
+        background-color: #C8E6C9;
+    }
+
+    main {
+        grid-area: main;
+        padding: 1.5rem;
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 60vh;;
+        background-color: #0C223F;
+    }
+
+    footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 0;
+        box-sizing: border-box;
+        background-color: #665800;
+    }
+
+    .icons {
+        padding: 5px;
+    }
+
+    menu, .pagination{
+        display: none;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .cardstop, .cardsbottom {
+        display: contents; 
+    }
+
+
+    .cardDesk, .cardTablet, .cardmobi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(50% - 20px);
+        min-width: 250px;
+        border: 1px solid #FFD700;
+    }
+
+    .maravilla1, .maravilla2, .maravilla3, .maravilla4, .maravilla5, .maravilla6, .maravilla7, .maravilla8 {
+        display: block;
+        border-radius: 0.25rem;
+        width: 100%;
+        max-width: 18rem;
+        margin: 10px;
+        object-fit: cover;
+        height: 17rem;
+    }
+
+    button {
+        border: none;
+        border-radius: 10px;
+        background-color: #FFA000;
+        cursor: pointer;
+        margin: 0.2rem;
+        height: 30px;
+        width: 130px;
+        font-size: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+
+/* Media Queries Versión Desktop*/
+
+@media only screen and (min-width: 1021px) and (max-width: 2048px) 
+{
+    body{
+        display: grid;
+        grid-template-areas: 
+        'aside main' 
+        'footer footer';
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 92% 8%;
+    }
+    
+    main{
+        grid-area: main;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    aside{
+        grid-area: aside;
+        justify-content: flex start;
+        flex-direction: column;
+        background-image: url(../img/background.jpg);
+        background-size: 100% 100%;
+        padding: 1.5rem;
+        background-color: #abbfd3;
+
+    }
+
+    aside h1{
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    menu{
+        display: flex;
+        flex-direction: column;
+        height: 95vh;
+        padding: 2px;
+    }
+
+    menu p{
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        margin: 0.7rem;
+        color: white;
+    }
+    .aside2 h1{
+        margin-left: 1rem;
+        font-style: italic;
+        color: #0e0d0d;
+        padding: 0.6rem;
+    }
+
+        .search-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+
+    label{
+        font-size: 0.8rem;
+    }
+
+    .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 11px;
+    }
+
+    .cardstop,  .cardsbottom{
+        display: flex;
+        align-items: center;
+        padding: 1rem auto;
+        gap: 5px;
+    }
+
+    .cardDesk, .cardTablet, .cardmobi{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.25rem;
+        width: 15rem;
+        margin: 10px;
+        height: 20rem;
+        border: 1px solid #FFD700;
+    }
+
+    .maravilla1, .maravilla2, .maravilla3, .maravilla4, .maravilla5, .maravilla6, .maravilla7, .maravilla8{
+        display: flex;
+        justify-content: center;
+        border-radius: 0.25rem;
+        width: 13.5rem;
+        margin: 10px;
+        height: 20rem;
+    }
+        button{
+        border: none;
+        border-radius: 10px;
+        background-color: #FFA000;
+        cursor: pointer;
+        margin: 0.5rem;
+        height: 30px;
+        width: 130px;
+        font-size:10px;
+        text-align: center;
+        }
+
+    .pagination{
+        display: none;
+    }
+
+    .pagination a.active{
+    background-color: #386b85;
+    color: white;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
