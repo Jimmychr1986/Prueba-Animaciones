@@ -14,64 +14,82 @@
             <h1>Maravillas del Mundo</h1>
         </div>
         <menu>
-            <p>Inicio</p>
-            <p>Historia</p>
-            <p>Ubicaciones</p>
+            <ul>
+                <li><a href="./index.html"><p>Inicio</p></a></li>
+                <li><a href="#Galeria"><p>Galeria</p></a></li>
+                <li><a href="#Contacto"><p>Contacto</p></a></li>
+            </ul>
         </menu>
     </aside>
 
-    <main>
+    <main id="Galeria">
         <div class="cards">
                 <!---Mobile-->
                 <div class="cardstop">
                     <div class="cardmobi">
                     <img class="maravilla1" src="./img/SaltoAngel.jpg" alt="Salto Angel">
-                    <br><p>Salto Angel</p>
+                    <div class="overlay">
+                    <p>Salto Angel</p>
                      <button>Ver más</button>
+                     </div>
                 </div>
                     <!---Tablet-->
                     <div class="cardTablet">
                     <img class="maravilla2" src="./img/torrepisa.jpg" alt="Torre Pisa">
-                    <br><p>Torre Pisa Roma</p>
+                    <div class="overlay">
+                    <p>Torre Pisa Roma</p>
                      <button>Ver más</button> 
+                    </div>
                     </div>
                     <!---Desktop-->
                     <div class="cardDesk">
                     <img class="maravilla3" src="./img/tajmahal.jpg" alt="Taj Mahal">
-                    <br><p>Taj Mahal</p>
-                     <button>Ver más</button>                       
+                    <div class="overlay">
+                    <p>Taj Mahal</p>    
+                     <button>Ver más</button>                 
+                    </div>                                        
                     </div>
 
                     <div class="cardDesk">
                     <img class="maravilla4" src="./img/piramide.jpg" alt="Piramides Egipto">
-                    <br><p>Piramides Egipto</p>
-                     <button>Ver más</button> 
+                    <div class="overlay">
+                    <p>Piramides Egipto</p>     
+                     <button>Ver más</button>                
+                    </div>                     
                     </div>
                 </div>
 
                 <div class="cardsbottom">
                     <div class="cardDesk">
                     <img class="maravilla5" src="./img/Eiffel.jpg" alt="Torre Eiffel">
-                    <br><p>Torre Eiffel</p>
-                     <button>Ver más</button> 
+                    <div class="overlay">
+                    <p>Torre Eiffel</p>
+                     <button>Ver más</button>                   
+                    </div> 
 
                     </div>
                     <div class="cardDesk">
                     <img class="maravilla6" src="./img/muralla.jpg" alt="Gran Muralla China">
-                    <br><p>Gran Muralla China</p>
-                     <button>Ver más</button> 
+                    <div class="overlay">
+                    <p>Gran Muralla China</p>     
+                     <button>Ver más</button>              
+                    </div> 
                     </div>   
 
                     <div class="cardDesk">
                     <img class="maravilla7" src="./img/coliseo.jpg" alt="Coliseo Roma">
-                    <br><p> Coliseo Roma</p>
-                     <button>Ver más</button> 
+                    <div class="overlay">
+                    <p> Coliseo Roma</p> 
+                     <button>Ver más</button>                  
+                    </div> 
                     </div> 
 
                     <div class="cardDesk">
                     <img class="maravilla8" src="./img/machupichu.jpg" alt="Machu Pichu">
-                    <br><p> Machu Pichu</p>
-                     <button>Ver más</button> 
+                    <div class="overlay">
+                    <p> Machu Pichu</p> 
+                     <button>Ver más</button>                  
+                    </div> 
                     </div> 
                 </div>
         </div>
@@ -91,14 +109,14 @@
         </div>
     </main>
     
-</body>
-
         <!---Footer-->
-        <footer>
+        <footer id="Contacto">
             <div class="icons">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-instagram"></i>
+                <a target="_blank" href="https://www.facebook.com/?locale=es_LA"><i class="fa-brands fa-facebook-f"></i></a>
+                <a target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <div class="footer-text">Todos los derechos reservados</div>
         </footer>
+
+</body>
 </html>
